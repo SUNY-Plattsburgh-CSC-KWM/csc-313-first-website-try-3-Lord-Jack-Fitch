@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <title>Hello World Website</title>
     <script>
-        function function-name() {
+        function namegenerator() {
             // >>> put a prompt here, ask the user for a new name <<< 
-            // Use document.getElementById("your id").textContent = .... to change the level 1 header to say something new
+            // Use document.getElementById("Jack Fitch).textContent = .... to change the level 1 header to say something new
+            const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+            var newName = prompt("Please enter a new name:");
+            if (newName) {
+                document.getElementById("jack-fitch").textContent = newName;
+            } 
+            else {
+                alert("No name entered. Please try again.");
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                document.getElementById("jack-fitch").textContent = randomName;
+            
+            
         }
+    }
     </script>
 </head>
 <body>
-    <h1 id="your-id-here">Hello, World!</h1>
-    <button onclick="function-name()">label-on-button</button>
+    <h1 id="jack-fitch">Hello, World!</h1>
+    <button onclick="namegenerator()">Change Name</button>
 </body>
 </html>
